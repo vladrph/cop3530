@@ -11,14 +11,14 @@ using namespace std;
 Name:  Default Constructor A queue object
 Pre-Condition: None
 Post-Condition:  An empty queue object has been constructed
-Description:
+Description: This default constructor creates a queue object and sets front to null
 **********************************************************************************************************************************************************/
 
 bqueue::bqueue():front(0){
     cout << "inside default constructor " <<endl;
-    int  count = 0;
 
-    //front= nullptr;
+
+
 }
 /***********************FUNCTION HEADER ******************************************************************************************************************
 Name:  Destructor
@@ -67,7 +67,7 @@ bqueue::bqueue(const bqueue& value){
 Name:  enqueue
 Pre-Condition: Elements are not inserted into a queue.
 Post-Condition:  Elements are inserted into a queue.
-Description: Enqueue inserts elements into the back of a queue provided there is space 
+Description: Enqueue inserts elements into the back of a queue provided there is space
 **********************************************************************************************************************************************************/
 
 
@@ -148,8 +148,12 @@ void bqueue::print(){
 
    bqnode *p = front;
 
+
+
+
    if (front == 0){
        cout << "Error queue is empty can't print " << endl;
+       exit(1);
        }
     if (p->next != front) {
 
